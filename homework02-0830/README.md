@@ -1,6 +1,8 @@
 
 
 ### second network structure:
+
+```
 MINSTAdder (
   (net_pool): MaxPool2d (size=(2, 2), stride=(2, 2), dilation=(1, 1))
   (bc1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True)
@@ -15,6 +17,7 @@ MINSTAdder (
   (fc2): Linear (1024 -> 256)
   (fc3): Linear (256 -> 1)
 )
+```
 
 acc: 96.86%
 
@@ -25,14 +28,15 @@ which can increase the accuracy.
 ### improvement over source template:
 1. add cuda()
 2. epoch --> 30
-3. use adam optimizer instead of SGD
+3. use Adam optimizer instead of SGD
 4. add batch normalization and relu activation function
-5. add evaluation and visulization module
+5. add evaluation and visualization module
 
 ### first network structure trial:
 
 2 conv2d layers
 
+```
 MINSTAdder (
   (net_pool): MaxPool2d (size=(2, 2), stride=(2, 2), dilation=(1, 1))
   (bc1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True)
@@ -45,5 +49,6 @@ MINSTAdder (
   (fc2): Linear (1024 -> 32)
   (fc3): Linear (32 -> 1)
 )
+```
 
 acc: 75.46%
