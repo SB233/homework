@@ -23,7 +23,7 @@ acc: 96.86%
 
 lesson learned: when the training loss is stable,
 we can increase the neural units in the network to have more parameters to tune,
-which can increase the accuracy.
+which can increase the accuracy
 
 ### improvement over source template:
 1. add cuda()
